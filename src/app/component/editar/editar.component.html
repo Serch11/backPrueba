@@ -1,0 +1,25 @@
+<section id="sectios">
+  <div class="container">
+    <div class="row mx-auto">
+      <div class="col-md-10" >
+        <div class="row"  >
+          <div class="col-m-3 py-4 mb-4" style="display: flex !important; justify-content: space-between !important;">
+          <div class="card" style="padding: 10px; margin: 10px !important;"  *ngFor="let item of listEstantes">
+              <div class="card-header">
+                <h2>{{item.descripcion}}</h2>
+              </div>
+              <div class="card-body">
+                <p>Codigo: {{item.codigo}}</p>
+                <p>N de filas: {{item.filas}}</p>
+                <p>N de columnas: {{item.columnas}}</p>
+                <p>
+                <button class="btn btn-primary" (click)="ruta(item._id);">Mostrar Estante</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
