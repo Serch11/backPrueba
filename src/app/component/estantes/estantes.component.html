@@ -7,7 +7,7 @@
             <h3  id="title">Crear Estante</h3>
           </div>
           <div class="card-body">
-            <form #formEstantes="ngForm" (ngSubmit)="guardar(formEstantes)" id="formEstantes">
+            <form #formEstantes="ngForm" (ngSubmit)="guardar(formEstantes)" id="formEstantes" #form>
                 <div class="form-group">
                   <label for="codigo">Codigo</label>
                     <input type="text" name="estante" class="form-control" id="estante" #codigo="ngModel" [(ngModel)]="Estante.codigo" required

@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-image: url(./assets/smartphone-notebook-taza-cafe-mesa_23-2148036967.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+
+}

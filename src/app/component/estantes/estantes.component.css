@@ -1,7 +1,50 @@
+#section{
+ margin-top: 30px;
+ height: 700px;
+}
+
 #title{
   color: black;
 }
+.container {
+  margin-top:  20px !important;
+  margin-bottom: 20px !important;
+}
+.card{
+  margin: 0px auto;
+  display:  block;
+   border-radius: 10px;
+   box-shadow: 0px 0px 3px black;
+   width:60%;
+}
+.card-header{
+  text-align: center;
+
+}
+
+#formEstantes{
+
+}
+#btn-guardar{
+  background-color: #FCEA0D !important ;
+  color: black ;
+  font-weight:  bold;
+  border: 1px solid #FCEA0D;
+  align-items: center;
+  width: 50%;
+  border-radius:5px;
+  display: block;
+  margin: 0px auto;
+}
 
 #formEstantes .form-group input {
-  width: 100%;
+ width: 100%;
+}
+
+#formEstantes label{
+  font-weight: bold;
+}
+
+.hidden{
+  display: none;
 }

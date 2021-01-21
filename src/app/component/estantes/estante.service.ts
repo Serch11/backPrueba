@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class estanteService {
   public url = 'http://localhost:5000/';
-  constructor(private httpcliente: HttpClient) {}
+  constructor(private httpcliente: HttpClient) { }
 
   saveEstante(params: EstanteModel): Observable<any> {
     let header = new HttpHeaders().set('Content-type', 'application/json');
@@ -25,5 +25,10 @@ export class estanteService {
     return this.httpcliente.get(this.url + 'getOneEstante/' + id, {
       headers: header,
     });
+  }
+
+  deleteEstante(id: string): Observable<any> {
+
+    return this.httpcliente.delete(this.url + "deleteEstate/" + id)
   }
 }

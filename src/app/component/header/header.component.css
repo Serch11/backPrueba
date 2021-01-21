@@ -1,0 +1,45 @@
+#header {
+
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3se ease;
+  position: sticky;
+  padding: 1rem;
+  width: 100%;
+  background-color: #252525;
+  color: white;
+  box-shadow: 0px 0px 10px black;
+
+}
+
+nav {
+  width: 100%;
+  color: transparent;
+  border: transparent;
+  height: inherit;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start !important;
+}
+
+nav a {
+  margin-left: 10px;
+  color: #FCEA0D;
+  font-size: 20px;
+}
+
+nav a:hover{
+ cursor: pointer;
+ background-color: #FCEA0D;
+ color:  #252525;
+ border: none;
+ border-radius: 10px;
+}
+
+
+#logo{
+  margin-right: 10px;
+  cursor: pointer;
+}

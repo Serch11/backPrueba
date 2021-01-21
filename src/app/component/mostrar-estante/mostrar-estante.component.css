@@ -1,0 +1,36 @@
+#section{
+  height: 700px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+#mensaje{
+  display: block;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+}
+.container{
+  display: flex !important;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.box{
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: #FCEA0D;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}

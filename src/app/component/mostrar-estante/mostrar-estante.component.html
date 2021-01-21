@@ -1,1 +1,8 @@
-
+<section id="section">
+  <h3 id="mensaje">Los estantes se puede eliminar haciendo click</h3>
+  <div class="container">
+    <div class="box" *ngFor="let item of ArrayEstante; let i = index" (click)="evento($event)">
+      {{i}}
+    </div>
+  </div>
+</section>

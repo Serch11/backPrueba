@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import {EstanteModel} from '../../model/modelEstante';
-import {estanteService} from '../estantes/estante.service'
+import { EstanteModel } from '../../model/modelEstante';
+import { estanteService } from '../estantes/estante.service'
+import swal from 'sweetalert';
 
 import { Router } from '@angular/router';
 @Component({
@@ -11,38 +12,47 @@ import { Router } from '@angular/router';
 })
 export class EstantesComponent implements OnInit {
 
+  @ViewChild('form') form;
 
-  public Estante : EstanteModel;
+  public Estante: EstanteModel;
   constructor(
-    private estanteService :estanteService,
-    private router:Router
+    private estanteService: estanteService,
+    private router: Router
   ) {
-    this.Estante = new EstanteModel("","","","");
+    this.Estante = new EstanteModel("", "", "", "");
   }
 
   ngOnInit(): void {
+
   }
 
 
-   guardar({value,valid}:{value:NgForm,valid:boolean}){
+  guardar(form:NgForm) {
 
-    if(valid){
+    if (form.valid) {
       console.log(this.Estante)
       this.estanteService.saveEstante(this.Estante).subscribe(
-        (estante) =>{
-            console.log(estante)
-            if(estante){
-             alert("usuarios creado con exito");
+        (estante) => {
+          console.log(estante)
+          if (estante) {
+            console.log(this.form)
+            form.reset();
+            swal("Good job!", "You clicked the button!", "success").then((value) => {
               setTimeout(() => {
-                  this.router.navigate(["/listadoEstantes"]);
-              }, 2000);
-            }
+                this.router.navigate(["/listadoEstantes"]);
+              }, 1000);
+
+            });
+
+          }
         }
       )
-   }
-    else{
-     alert("Llene el formulario correctamente")
+    }
+    else {
+      console.log(this.form)
+      swal("Error", "Complete el formulario correctamente", "error")
     }
 
-  }}
+  }
+}
 
