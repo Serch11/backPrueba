@@ -5,6 +5,7 @@ import { estanteService } from '../estantes/estante.service'
 import swal from 'sweetalert';
 
 import { Router } from '@angular/router';
+import { FlashMessagesService } from 'angular2-flash-messages';
 @Component({
   selector: 'app-estantes',
   templateUrl: './estantes.component.html',
@@ -17,7 +18,8 @@ export class EstantesComponent implements OnInit {
   public Estante: EstanteModel;
   constructor(
     private estanteService: estanteService,
-    private router: Router
+    private router: Router,
+    private flassMenssage:FlashMessagesService
   ) {
     this.Estante = new EstanteModel("", "", "", "");
   }
@@ -45,12 +47,23 @@ export class EstantesComponent implements OnInit {
             });
 
           }
+        },
+        (error)=>{
+          console.log(error)
+          if(error){
+            swal({
+              text:"Las filas y columnas deben ser datos numericos",
+              icon:"warning"
+            })
+          }
         }
       )
     }
     else {
       console.log(this.form)
-      swal("Error", "Complete el formulario correctamente", "error")
+      this.flassMenssage.show("El formulario debe estar llenado correctamente",{
+        cssClass:"alert-danger", timeout:4000}
+      )
     }
 
   }

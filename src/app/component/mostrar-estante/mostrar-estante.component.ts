@@ -45,7 +45,7 @@ export class MostrarEstanteComponent implements OnInit {
     });
   }
 
-  evento(e: Event) {
+  evento(e: any) {
     console.log(e);
       if(e.path){
         var box = e.path[0]

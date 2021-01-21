@@ -9,6 +9,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { EditarComponent } from './component/editar/editar.component';
 import { MostrarEstanteComponent } from './component/mostrar-estante/mostrar-estante.component';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MostrarEstanteComponent } from './component/mostrar-estante/mostrar-est
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

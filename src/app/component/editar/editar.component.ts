@@ -33,10 +33,9 @@ export class EditarComponent implements OnInit {
     console.log(id);
     this.router.navigate(['/mostrarEstantes', id])
   }
-  eliminar(id: string,e:Event) {
+  eliminar(id: string,e:any) {
   console.log(e.path[3])
   if(e.path){
-
     var card : any = e.path[3];
     console.log(card)
   }

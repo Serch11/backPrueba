@@ -28,7 +28,6 @@ export class estanteService {
   }
 
   deleteEstante(id: string): Observable<any> {
-
     return this.httpcliente.delete(this.url + "deleteEstate/" + id)
   }
 }
