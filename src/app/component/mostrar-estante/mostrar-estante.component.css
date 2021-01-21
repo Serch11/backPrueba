@@ -35,3 +35,8 @@
 .hidden{
   display: none;
 }
+
+.box:hover{
+  color:#FCEA0D;
+  background-color: black;
+}
